@@ -7,4 +7,8 @@ public class carro {
         System.out.print("Motor está sendo desligado");
         
     }
+    public void freiar() {
+        velocidade = 0;
+        System.out.println("O carro foi parado.");
+    }
 }
