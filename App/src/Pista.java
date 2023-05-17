@@ -1,6 +1,7 @@
 public class Pista {
     private int distancia;
     private boolean pistaMolhada;
+    private int voltas;
     public void setDistancia(int distancia) {
         this.distancia = distancia;
     }
@@ -13,7 +14,14 @@ public class Pista {
     }
     public void simularCorrida(Carro carro) {
 
-        System.out.println("O carro percorreu a pista em "+ (carro.getVelocidade() / this.distancia ));    
+        System.out.println("O carro percorreu a pista em "+ (carro.getVelocidade() / this.distancia ));
+    
+    }
+    public void percorrerVolta(Carro carro){
+                
+        System.out.println("O carro percorreu a volta em "+ (carro.getVelocidade() / this.distancia ));
+        
+
     }
 
 
