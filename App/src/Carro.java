@@ -5,8 +5,10 @@ public class Carro {
 
     }
     private int velocidade;
+    private  boolean motor;
     public void ligarMotor() {
-        System.out.print("Motor está sendo ligado");   
+        System.out.print("Motor está sendo ligado"); 
+        this.motor=true;
     }
     public int getVelocidade() {
         return velocidade;
@@ -17,7 +19,7 @@ public class Carro {
     
     public void desligarMotor() {
         System.out.print("Motor está sendo desligado");
-        
+        this.motor=false;
     }
     public void frear() {
         velocidade = 0;
