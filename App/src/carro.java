@@ -1,4 +1,4 @@
-public class carro {
+public class Carro {
     int velocidade;
     public void ligarMotor() {
         System.out.print("Motor está sendo ligado");   
