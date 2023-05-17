@@ -21,13 +21,13 @@ public class Pista {
         for (int i = 0; i < voltas; i++) {
             percorrerVolta(carro);
         }
-        System.out.println("O carro percorreu a pista em "+ (carro.getVelocidade() / this.distancia*this.voltas ));
+        System.out.println("O carro percorreu a pista em "+ (this.distancia*this.voltas / carro.getVelocidade()   ));
 
     
     }
     public void percorrerVolta(Carro carro){
                 
-        System.out.println("O carro percorreu a volta em "+ (carro.getVelocidade() / this.distancia ));
+        System.out.println("O carro percorreu a volta em "+ (this.distancia / carro.getVelocidade() ));
         
 
     }
