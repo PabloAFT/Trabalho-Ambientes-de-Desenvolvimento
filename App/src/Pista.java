@@ -13,7 +13,7 @@ public class Pista {
     }
     public void simularCorrida(Carro carro) {
 
-        System.out.println("O carro percorreu a pista em "+ (carro.getVelocidade() - this.distancia ));    
+        System.out.println("O carro percorreu a pista em "+ (carro.getVelocidade() / this.distancia ));    
     }
 
 
