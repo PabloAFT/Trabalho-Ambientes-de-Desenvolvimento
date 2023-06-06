@@ -13,22 +13,33 @@ public class Pista {
     public int getDistancia() {
         return distancia;
     }
+    public void setVoltas(int voltas) {
+        this.voltas = voltas;
+    }
+    public int getVoltas() {
+        return voltas;
+    }
     public void chuva() {
         System.out.println("Chuva molha a pista, tornando-a escorregadia.");
         this.pistaMolhada = true;
     }
-    public void simularCorrida(Carro carro) {
+    public void simularCorrida(Carro carro, Motorista motorista) {
+        double tempoTotal = 0;
         for (int i = 0; i < voltas; i++) {
-            percorrerVolta(carro);
+            tempoTotal = tempoTotal + percorrerVolta(carro, motorista);
         }
-        System.out.println("O carro percorreu a pista em "+ (this.distancia*this.voltas / carro.getVelocidade()   ));
+
+        System.out.println("O carro percorreu a pista em "+ tempoTotal + "segundos");
 
     
     }
-    public void percorrerVolta(Carro carro){
-                
-        System.out.println("O carro percorreu a volta em "+ (this.distancia / carro.getVelocidade() ));
-        
+    public double percorrerVolta(Carro carro, Motorista motorista){
+        double tempo = this.distancia / carro.getVelocidade() * (motorista.habilidade / 10) ;
+        if (pistaMolhada) {
+            tempo = tempo + tempo*0.3;
+        }        
+        System.out.println("O carro percorreu a volta em "+ tempo);
+        return tempo;
 
     }
 
